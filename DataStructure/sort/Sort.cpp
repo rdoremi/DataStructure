@@ -31,16 +31,23 @@ void Sort<T>::swap(T& target, T& data)
 template <class T>
 void Sort<T>::insertSort(T* arr, int len)
 {
-    for (int i = 0; i < len; ++i)
+    /*for (int i = 1; i < len; ++i)
     {
-        int max = i;
-        for (int j = i; j >= 0; --j)
+       // int max = i;
+        for (int j = i; j > 0 && (arr[j] < arr[j-1]); --j)
         {
-            if (arr[j] > arr[max])
-            {
-                swap(arr[j], arr[max]);
-                max = j;
-            }
+             swap(arr[j], arr[j-1]);
+               // max = j;
+        }
+    }*/
+
+    for (int i = 1; i < len; ++i)
+    {
+        
+        for (int j = i; j > 0 && (arr[j] < arr[j-1]); --j)
+        {
+            swap(arr[j], arr[j-1]);
+            // max = j;
         }
     }
 }

@@ -24,6 +24,6 @@ int main(int argc, char* argv[])
    
     //SortTestHelper::testSort("selectSort",arr,Sort<int>::selectSort,len);
     SortTestHelper::testSort("selectSort",arr,Sort<int>::insertSort,len);
-    SortTestHelper::printArr(arr,len);
+   SortTestHelper::printArr(arr,len);
     return 0;
 }
