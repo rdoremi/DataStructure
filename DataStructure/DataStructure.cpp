@@ -15,13 +15,15 @@ void selectSort1(T* arr)
 
 int main(int argc, char* argv[])
 {
-    int len = 100000;
+    int len = 100;
     int* arr = SortTestHelper::generateRandomArray(len, 20, 100);
     
    //SelectSort<int>::selectSort(arr,len);
 
     //SortTestHelper::printArr(arr,len);
-    SortTestHelper::testSort("selectSort",arr,SelectSort<int>::selectSort,len);
    
+    //SortTestHelper::testSort("selectSort",arr,Sort<int>::selectSort,len);
+    SortTestHelper::testSort("selectSort",arr,Sort<int>::insertSort,len);
+    SortTestHelper::printArr(arr,len);
     return 0;
 }
